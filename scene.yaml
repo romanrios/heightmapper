@@ -1,18 +1,16 @@
 sources:
     elevation:
         type: Raster
-        url: https://tile.nextzen.org/tilezen/terrain/v1/512/terrarium/{z}/{x}/{y}.png
+        url: https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png
+        max_zoom: 14
+        tile_size: 256
+    mapzen:
+        type: MVT
+        url: https://tiles.stadiamaps.com/data/openmaptiles/{z}/{x}/{y}.pbf
         max_zoom: 14
         tile_size: 512
         url_params:
-            api_key: dmlO1fVQRPKI-GrVIYJ1YA
-    mapzen:
-        type: MVT
-        url: https://tile.nextzen.org/tilezen/vector/v1/512/all/{z}/{x}/{y}.mvt
-        max_zoom: 16
-        tile_size: 512
-        url_params:
-            api_key: dmlO1fVQRPKI-GrVIYJ1YA
+            api_key: 524df599-7705-4bbb-88f8-6112cce9734c
 styles:
     hillshade:
         base: raster
